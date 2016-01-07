@@ -1,0 +1,36 @@
+Mongo
+Start
+& "C:\Program Files\MongoDB 2.6 Standard\bin\mongod.exe" --dbpath F:\data2\db
+
+Run
+mongod.exe
+
+show dbs
+show collections
+use <db>
+db.articles.find().forEach(printjson)
+
+db.users.find( { _id: ObjectId("53709fcd0cb00f2846638423") } )
+
+Repair unexpected crash
+rm /data/db/mongod.lock
+mongod --dbpath /data/db --repair
+mongod --dbpath /data/db
+
+Drop current database
+db.dropDatabase()
+
+
+Remove all databases
+var dbs = db.getMongo().getDBNames()
+for(var i in dbs){
+    db = db.getMongo().getDB( dbs[i] );
+    print( "dropping db " + db.getName() );
+    db.dropDatabase();
+}
+
+C:\Program Files\MongoDB 2.6 Standard\bin\mongo.exe
+show dbs
+use database_test
+show collections
+db.customer.find().forEach(printjson)

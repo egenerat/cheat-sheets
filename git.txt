@@ -1,0 +1,94 @@
+branches:
+- list remote branches
+git branch -a
+
+
+
+---------------------------------
+GIT
+
+
+git diff to see what is still unstaged
+git diff --cached to see what you’ve staged so far:
+git log -p -2
+
+Changing your last commit
+$ git commit -m 'initial commit'
+$ git add forgotten_file
+$ git commit --amend
+
+git diff master~5:./Test.java ./Test.java
+
+
+
+http://scotch.io/bar-talk/git-cheat-sheet
+
+To use a previous tag :
+clone download in local all tags
+git tag -l
+git checkout tags/<tag_name>
+
+How to use a previous revision
+git checkout [revision] .
+
+To come back at the last version : git checkout master
+
+Create a new branch and checkout
+$ git checkout -b iss53
+Switched to a new branch 'iss53'
+This is shorthand for:
+
+$ git branch iss53
+$ git checkout iss53
+git push origin branchName
+
+Merge
+$ git checkout master
+$ git merge iss53
+
+Delete a branch local
+$ git branch -d iss53
+
+To get new master code in a branch
+git checkout dmgr2      # gets you "on branch dmgr2"
+git fetch origin        # gets you up to date with origin
+git merge origin/master
+
+Remote
+As of Git v1.7.0, you can delete a remote branch using
+
+git push origin --delete <branchName>
+which is easier to remember than
+
+git push origin :<branchName>
+
+List remote branches:
+git ls-remote --heads origin
+
+To generate keys, execute the script (10 min delay)
+ \\sepccrepo\ClearCase\Utils\Services\SSH_KeyGen\ssh_keygen_windows.bat
+
+git remote -v
+git remote set-url origin https://github.com/USERNAME/REPOSITORY2.git
+git remote -v
+
+Push on 2 branches :
+git push origin master releases/1.0
+
+Save credentials linux
+git config credential.helper store
+
+
+Remove one commit:
+git reset --hard to the commit we come back to
+git push -f to push to the remote server
+
+
+revert several commit:
+A -> B -> C -> D -> HEAD
+Goal is to come back to A commit
+$ git revert --no-commit D
+$ git revert --no-commit C
+$ git revert --no-commit B
+$ git commit -m'the commit message'
+
