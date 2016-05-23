@@ -1,0 +1,2 @@
+If the current user does not have access to the mounted shared folders, add user to vboxsf group 
+sudo adduser $USER vboxsf
