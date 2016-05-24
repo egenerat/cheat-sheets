@@ -1,2 +1,9 @@
 If the current user does not have access to the mounted shared folders, add user to vboxsf group 
 sudo adduser $USER vboxsf
+
+Mount vdi disk
+sudo apt-get install qemu-kvm
+sudo modproble nbd
+qemu-nbd -c /dev/nbd0 /home/user/VMs/vm.vdi
+sudo fdisk -l /dev/nbd0
+sudo mount /dev/nbd0p1 /mnt
