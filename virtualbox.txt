@@ -7,3 +7,7 @@ sudo modproble nbd
 qemu-nbd -c /dev/nbd0 /home/user/VMs/vm.vdi
 sudo fdisk -l /dev/nbd0
 sudo mount /dev/nbd0p1 /mnt
+
+
+After install guest additions
+sudo apt-get install build-essential linux-headers-`uname -r` dkms
