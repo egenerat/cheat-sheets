@@ -93,3 +93,12 @@ $ git commit -m'the commit message'
 Setting user name and email
 git config --global user.name "John Doe"
 git config --global user.email "your_email@example.com"
+
+
+Stage
+git add -A stages all
+git add .  stages new and modified, 	without deleted
+git add -u stages modified and deleted, without new
+
+git add -A <=> --all
+git add -u <=> --update
