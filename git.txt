@@ -102,3 +102,11 @@ git add -u stages modified and deleted, without new
 
 git add -A <=> --all
 git add -u <=> --update
+
+
+
+# Change email address in last 100 commits
+git filter-branch -f --env-filter "GIT_AUTHOR_NAME='new name'; GIT_AUTHOR_EMAIL='new email'; GIT_COMMITTER_NAME='old name'; GIT_COMMITTER_EMAIL='old_email';" HEAD~100..HEAD
+
+Show a file on another branch
+git show branch:file
