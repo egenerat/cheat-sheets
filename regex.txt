@@ -1,0 +1,10 @@
+Regex:
+characters to be escaped:
+- parenthesis ()
+- dot .
+- interrogation mark ?
+- star *
+- plus +
+
+Non-capturing group:
+(?:patternA|patternB)
