@@ -1,0 +1,8 @@
+
+non-capturing group (?:a|b)
+
+\s shorthand [ \t\r\n\f]
+\S [^ \t\r\n\f]
+
+[.] matches only . character
+. maches any character
