@@ -1,3 +1,4 @@
+Symetric encryption with openssl
 Encrypt:
 
 openssl aes-256-cbc -a -salt -in secrets.txt -out secrets.txt.enc
