@@ -1,24 +1,30 @@
+# GIT
+
 branches:
 - list remote branches
 git branch -a
 
 
 
----------------------------------
-GIT
-
-
 git diff to see what is still unstaged
-git diff --cached to see what you’ve staged so far:
+git diff --cached to see what youâ€™ve staged so far:
 git log -p -2
 
-Changing your last commit
-$ git commit -m 'initial commit'
-$ git add forgotten_file
-$ git commit --amend
+Adding a change to last commit
+```
+git commit -m 'commit missing a file'
+git add forgotten_file
+git commit --amend
+```
 
 git diff master~5:./Test.java ./Test.java
 
+
+Delete a file from GIT, but keep local copy
+git rm --cached <file>
+
+Stash including untracked files
+git stash -u
 
 
 http://scotch.io/bar-talk/git-cheat-sheet
@@ -34,8 +40,12 @@ git checkout [revision] .
 To come back at the last version : git checkout master
 
 Create a new branch and checkout
+```
 $ git checkout -b iss53
 Switched to a new branch 'iss53'
+```
+
+
 This is shorthand for:
 
 $ git branch iss53
