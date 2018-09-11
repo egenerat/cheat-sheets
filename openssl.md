@@ -1,9 +1,11 @@
-Symetric encryption with openssl
-Encrypt:
-
+# OpenSSL
+## Symetric encryption with openssl
+### Encrypt:
+```
 openssl aes-256-cbc -a -salt -in secrets.txt -out secrets.txt.enc
+```
 
-Decrypt:
-
+### Decrypt:
+```
 openssl aes-256-cbc -d -a -in secrets.txt.enc -out secrets.txt.new
-
+```
