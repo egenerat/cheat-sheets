@@ -166,3 +166,9 @@ Show a file on another branch
 ```
 git show <branch>:<file>
 ```
+
+## Amend
+Update date/time of latest commit:
+```
+git commit --amend --date="Sat Jun 22 23:00 2019 +0100"
+```
