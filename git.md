@@ -19,9 +19,32 @@ git add forgotten_file
 git commit --amend
 ```
 
+Show all tags that do not contain a dot
+```
+git tag --list | grep -v -F \.
+```
+
+
 ```
 git diff master~5:./Test.java ./Test.java
 ```
+
+## Tags
+Fetch all tags
+```
+git fetch --tags
+```
+
+Delete tag from remote
+```
+git push origin :<tag>
+```
+
+Delete tag locally
+```
+git tag --delete <tag>
+```
+
 
 Delete a file from GIT, but keep local copy
 ```
