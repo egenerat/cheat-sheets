@@ -1,5 +1,20 @@
 # GIT
 
+### status
+```
+git status
+```
+
+To show the ignored file in git status
+```
+git status --ignored
+```
+
+Possible to show the git status only in one folder:
+```
+git status src/
+```
+
 ## Branches:
 - list remote branches
 ```
